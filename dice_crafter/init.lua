@@ -1,7 +1,7 @@
 dice_crafter = {}
 dice_crafter.registered_blueprints = {}
 
-local path = minetest.get_modpath("dice_crafter")
+local path = core.get_modpath("dice_crafter")
 dofile(path.."/recipes.lua")
 
 dice.register_die("dice_crafter:template_coin", {
@@ -144,7 +144,7 @@ core.register_node("dice_crafter:crafter", {
         "listring[current_player;main]"..
         "listring[context;blueprint]"
         
-        local meta = minetest.get_meta(pos)
+        local meta = core.get_meta(pos)
         meta:set_string("formspec", formspec)
         local inv = meta:get_inventory()
         inv:set_size("ingredient", 1)
@@ -162,7 +162,7 @@ core.register_node("dice_crafter:crafter", {
         return stack:get_count()
     end,
     on_metadata_inventory_put = function(pos, from_list, from_index, to_list, to_index, count, player)
-        local meta = minetest.get_meta(pos)
+        local meta = core.get_meta(pos)
         local inventory = meta:get_inventory()
         local ingredient = inventory:get_stack("ingredient", 1)
         local blueprint = inventory:get_stack("blueprint", 1)
@@ -180,7 +180,7 @@ core.register_node("dice_crafter:crafter", {
         return
     end,
     on_metadata_inventory_take = function(pos, listname, index, stack, player)
-        local meta = minetest.get_meta(pos)
+        local meta = core.get_meta(pos)
         local inventory = meta:get_inventory()
         local blueprint = inventory:get_stack("blueprint", 1)
         local ingredient = inventory:get_stack("ingredient", 1)
