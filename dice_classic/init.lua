@@ -2,7 +2,7 @@ dice.register_die("dice_classic:coin", {
     tooltip = {
         "\\YELLOW\\Coin",
         "",
-        "Two-Sided", 
+        "Two-Sided",
         "\\GREEN\\    -    Classic Pack",
         "\\GREEN\\    -    Heads/Tails",
     },
@@ -14,11 +14,27 @@ dice.register_die("dice_classic:coin", {
     },
 })
 
+dice.register_die("dice_classic:classic_d4", {
+    tooltip = {
+        "\\GREEN\\D4",
+        "",
+        "Four-Sided",
+        "\\GREEN\\    -    Classic Pack",
+        "\\GREEN\\    -    Arabic Numerals",
+    },
+    preset = "d4",
+    textures = {"dice_classic_d4.png"},
+    sounds = dice.sounds.die,
+    groups = {
+        dice_classic = 4,
+    },
+})
+
 dice.register_die("dice_classic:classic_d6", {
     tooltip = {
         "\\GREEN\\D6",
         "",
-        "Six-Sided", 
+        "Six-Sided",
         "\\GREEN\\    -    Classic Pack",
         "\\GREEN\\    -    Pips",
     },
@@ -30,11 +46,27 @@ dice.register_die("dice_classic:classic_d6", {
     },
 })
 
+dice.register_die("dice_classic:classic_d8", {
+    tooltip = {
+        "\\GREEN\\D8",
+        "",
+        "Eight-Sided",
+        "\\GREEN\\    -    Classic Pack",
+        "\\GREEN\\    -    Arabic Numerals",
+    },
+    preset = "d8",
+    textures = {"dice_classic_d8.png"},
+    sounds = dice.sounds.die,
+    groups = {
+        dice_classic = 8,
+    },
+})
+
 dice.register_die("dice_classic:classic_d12", {
     tooltip = {
         "\\GREEN\\D12",
         "",
-        "Twelve-Sided", 
+        "Twelve-Sided",
         "\\GREEN\\    -    Classic Pack",
         "\\GREEN\\    -    Arabic Numerals",
     },
@@ -50,7 +82,7 @@ dice.register_die("dice_classic:classic_d20", {
     tooltip = {
         "\\GREEN\\D20",
         "",
-        "Twenty-Sided", 
+        "Twenty-Sided",
         "\\GREEN\\   -    Classic Pack",
         "\\GREEN\\   -    Arabic Numerals",
     },
@@ -66,8 +98,16 @@ dice.register_die("dice_classic:classic_d20", {
 dice_crafter.register_blueprint("dice_classic:blueprint", {
     recipes = {
         {
+            "dice_crafter:template_d4",
+            "dice_classic:classic_d4"
+        },
+        {
             "dice_crafter:template_d6",
             "dice_classic:classic_d6"
+        },
+        {
+            "dice_crafter:template_d8",
+            "dice_classic:classic_d8"
         },
         {
             "dice_crafter:template_d12",

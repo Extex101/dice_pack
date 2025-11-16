@@ -23,12 +23,17 @@ Textures
 #### `dice_classic/`
 - `dice_classic_blueprint.png`
 - `dice_classic_coin.png`
+- `dice_classic_d4.png`
 - `dice_classic_d6.png`
+- `dice_classic_d8.png`
 - `dice_classic_d12.png`
 - `dice_classic_d20.png`
+
 #### `dice_crafter/`
 - `dice_crafter_template_coin.png`
+- `dice_crafter_template_d4.png`
 - `dice_crafter_template_d6.png`
+- `dice_crafter_template_d8.png`
 - `dice_crafter_template_d12.png`
 - `dice_crafter_template_d20.png`
 - `dice_crafter_ui.png`

@@ -11,13 +11,37 @@ dice.register_die("dice_crafter:template_coin", {
     disable_popup = true,
     disable_message = true,
     disable_rename = true,
+    collide_with_objects = false,
     face_count = 1,
     rest_time = 1.5,
     throw_velocity = 5,
     throw_kick = 0,
     min_shake_time = 0,
     sounds = dice.sounds.coin,
-    groups = {dice_crafter_template = 1}
+    groups = {dice_crafter_template = 1},
+})
+
+dice.register_die("dice_crafter:template_d4", {
+    tooltip = "Four-Sided Die Template",
+    preset = "d4",
+    textures = {"dice_crafter_template_d4.png"},
+    disable_popup = true,
+    disable_message = true,
+    disable_rename = true,
+    collide_with_objects = false,
+    face_count = 1,
+    rest_time = 1.5,
+    throw_velocity = 5,
+    min_shake_time = 0,
+    sounds = {
+        shake = "dice_api_shake",
+        fly = "dice_api_fly",
+        first_impact = "dice_api_roll",
+        hit = "dice_api_hit",
+        land = "dice_api_hit",
+        collect = "dice_api_hit"
+    },
+    groups = {dice_crafter_template = 4}
 })
 
 dice.register_die("dice_crafter:template_d6", {
@@ -27,6 +51,7 @@ dice.register_die("dice_crafter:template_d6", {
     disable_popup = true,
     disable_message = true,
     disable_rename = true,
+    collide_with_objects = false,
     face_count = 1,
     rest_time = 1.5,
     throw_velocity = 5,
@@ -42,6 +67,29 @@ dice.register_die("dice_crafter:template_d6", {
     groups = {dice_crafter_template = 6}
 })
 
+dice.register_die("dice_crafter:template_d8", {
+    tooltip = "Eight-Sided Die Template",
+    preset = "d8",
+    textures = {"dice_crafter_template_d8.png"},
+    disable_popup = true,
+    disable_message = true,
+    disable_rename = true,
+    collide_with_objects = false,
+    face_count = 1,
+    rest_time = 1.5,
+    throw_velocity = 5,
+    min_shake_time = 0,
+    sounds = {
+        shake = "dice_api_shake",
+        fly = "dice_api_fly",
+        first_impact = "dice_api_roll",
+        hit = "dice_api_hit",
+        land = "dice_api_hit",
+        collect = "dice_api_hit"
+    },
+    groups = {dice_crafter_template = 8}
+})
+
 dice.register_die("dice_crafter:template_d12", {
     tooltip = "Twelve-Sided Die Template",
     preset = "d12",
@@ -49,6 +97,7 @@ dice.register_die("dice_crafter:template_d12", {
     disable_popup = true,
     disable_message = true,
     disable_rename = true,
+    collide_with_objects = false,
     face_count = 1,
     rest_time = 1.5,
     throw_velocity = 5,
@@ -71,6 +120,7 @@ dice.register_die("dice_crafter:template_d20", {
     disable_popup = true,
     disable_message = true,
     disable_rename = true,
+    collide_with_objects = false,
     face_count = 1,
     rest_time = 1.5,
     throw_velocity = 5,
@@ -125,7 +175,6 @@ core.register_node("dice_crafter:crafter", {
     _mcl_blast_resistance = 2.5,
 	_mcl_hardness = 2.5,
     on_construct = function(pos)
-
         local formspec = "formspec_version[6]"..
         "size[10.5,11]"..
         "style_type[list;spacing=0.1875,0.25]"..
@@ -143,7 +192,7 @@ core.register_node("dice_crafter:crafter", {
         "listring[context;output]"..
         "listring[current_player;main]"..
         "listring[context;blueprint]"
-        
+
         local meta = core.get_meta(pos)
         meta:set_string("formspec", formspec)
         local inv = meta:get_inventory()
@@ -207,7 +256,7 @@ core.register_node("dice_crafter:crafter", {
             end
             return
         end
-        
+
         if ingredient:get_count() == 0 or blueprint:get_count() == 0 then
             inventory:set_stack("output", 1, ItemStack(""))
         end

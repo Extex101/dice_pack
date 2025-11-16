@@ -25,28 +25,10 @@ core.register_craft({
     }
 })
 
+
 -- ________D4 Crafting________ --
-
--- core.register_craft({
---     output = "dice_crafter:template_d4",
---     recipe = {
---         {black, paper, black},
---         {paper, clay, paper},
---         {black, paper, black}
---     }
--- })
-
--- ________D6 Crafting________ --
-
--- core.register_craft({
---     type = "shapeless",
---     output = "dice_crafter:template_d6",
---     recipe = {"dice_crafter:template_d4", paper}
--- })
-
--- Remove once d4 is added
 core.register_craft({
-    output = "dice_crafter:template_d6",
+    output = "dice_crafter:template_d4",
     recipe = {
         {black, paper, black},
         {paper, clay, paper},
@@ -54,28 +36,35 @@ core.register_craft({
     }
 })
 
+
+-- ________D6 Crafting________ --
+core.register_craft({
+    type = "shapeless",
+    output = "dice_crafter:template_d6",
+    recipe = {"dice_crafter:template_d4", paper}
+})
+
+
 -- ________D8 Crafting________ --
+core.register_craft({
+    type = "shapeless",
+    output = "dice_crafter:template_d8",
+    recipe = {"dice_crafter:template_d4", paper, paper}
+})
 
--- core.register_craft({
---     type = "shapeless",
---     output = "dice_crafter:template_d8",
---     recipe = {"dice_crafter:template_d4", paper, paper}
--- })
-
--- core.register_craft({
---     type = "shapeless",
---     output = "dice_crafter:template_d8",
---     recipe = {"dice_crafter:template_d6", paper}
--- })
+core.register_craft({
+    type = "shapeless",
+    output = "dice_crafter:template_d8",
+    recipe = {"dice_crafter:template_d6", paper}
+})
 
 
 -- ________D12 Crafting________ --
-
--- core.register_craft({
---     type = "shapeless",
---     output = "dice_crafter:template_d12",
---     recipe = {"dice_crafter:template_d4", paper, paper, paper}
--- })
+core.register_craft({
+    type = "shapeless",
+    output = "dice_crafter:template_d12",
+    recipe = {"dice_crafter:template_d4", paper, paper, paper}
+})
 
 core.register_craft({
     type = "shapeless",
@@ -83,20 +72,19 @@ core.register_craft({
     recipe = {"dice_crafter:template_d6", paper, paper}
 })
 
--- core.register_craft({
---     type = "shapeless",
---     output = "dice_crafter:template_d12",
---     recipe = {"dice_crafter:template_d8", paper}
--- })
+core.register_craft({
+    type = "shapeless",
+    output = "dice_crafter:template_d12",
+    recipe = {"dice_crafter:template_d8", paper}
+})
 
 
 -- ________D20 Crafting________ --
-
--- core.register_craft({
---     type = "shapeless",
---     output = "dice_crafter:template_d20",
---     recipe = {"dice_crafter:template_d4", paper, paper, paper, paper}
--- })
+core.register_craft({
+    type = "shapeless",
+    output = "dice_crafter:template_d20",
+    recipe = {"dice_crafter:template_d4", paper, paper, paper, paper}
+})
 
 core.register_craft({
     type = "shapeless",
@@ -104,11 +92,11 @@ core.register_craft({
     recipe = {"dice_crafter:template_d6", paper, paper, paper}
 })
 
--- core.register_craft({
---     type = "shapeless",
---     output = "dice_crafter:template_d20",
---     recipe = {"dice_crafter:template_d8", paper, paper}
--- })
+core.register_craft({
+    type = "shapeless",
+    output = "dice_crafter:template_d20",
+    recipe = {"dice_crafter:template_d8", paper, paper}
+})
 
 core.register_craft({
     type = "shapeless",
