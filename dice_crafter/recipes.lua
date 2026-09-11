@@ -1,10 +1,11 @@
+if xcompat.gameid == "xcompat_unknown_gameid" then return end
 
-local iron = xcompat.materials.steel_ingot
-local gold = xcompat.materials.gold_ingot
+local iron = xcompat.materials.steel_ingot or ""
+local gold = xcompat.materials.gold_ingot or ""
 local wood = "group:wood"
-local paper = xcompat.materials.paper
-local clay = xcompat.materials.clay_lump
-local black = xcompat.materials.dye_black
+local paper = xcompat.materials.paper or ""
+local clay = xcompat.materials.clay_lump or ""
+local black = xcompat.materials.dye_black or ""
 
 core.register_craft({
     output = "dice_crafter:crafter",

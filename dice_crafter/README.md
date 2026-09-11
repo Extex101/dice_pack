@@ -19,7 +19,7 @@ dice_crafter.register_blueprint("my_dice_pack:blueprint", {
         },
         -- ect.
     },
-    -- See [DiceAPI](https://github.com/Extex101/dice_api/blob/main/api.md#die-definition) for more information on tooltip coloring. 
+    -- See [Luect API](https://github.com/Extex101/luect/blob/main/README.md) for more information on coloring and Luect formatting. 
     -- Alternatively, you can use description = "" for default behavior
     tooltip_colors = {
         MINE = "#a2a85b"

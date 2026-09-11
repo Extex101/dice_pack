@@ -1,10 +1,10 @@
 dice.register_die("dice_classic:coin", {
     tooltip = {
-        "\\YELLOW\\Coin",
+        "\\yellow\\Coin",
         "",
         "Two-Sided",
-        "\\GREEN\\    -    Classic Pack",
-        "\\GREEN\\    -    Heads/Tails",
+        "\\green\\    -    Classic Pack",
+        "\\green\\    -    Heads/Tails",
     },
     preset = "coin",
     textures = {"dice_classic_coin.png"},
@@ -16,11 +16,11 @@ dice.register_die("dice_classic:coin", {
 
 dice.register_die("dice_classic:classic_d4", {
     tooltip = {
-        "\\GREEN\\D4",
+        "\\green\\D4",
         "",
         "Four-Sided",
-        "\\GREEN\\    -    Classic Pack",
-        "\\GREEN\\    -    Arabic Numerals",
+        "\\green\\    -    Classic Pack",
+        "\\green\\    -    Arabic Numerals",
     },
     preset = "d4",
     textures = {"dice_classic_d4.png"},
@@ -32,11 +32,11 @@ dice.register_die("dice_classic:classic_d4", {
 
 dice.register_die("dice_classic:classic_d6", {
     tooltip = {
-        "\\GREEN\\D6",
+        "\\green\\D6",
         "",
         "Six-Sided",
-        "\\GREEN\\    -    Classic Pack",
-        "\\GREEN\\    -    Pips",
+        "\\green\\    -    Classic Pack",
+        "\\green\\    -    Pips",
     },
     preset = "d6",
     textures = {"dice_classic_d6.png"},
@@ -48,11 +48,11 @@ dice.register_die("dice_classic:classic_d6", {
 
 dice.register_die("dice_classic:classic_d8", {
     tooltip = {
-        "\\GREEN\\D8",
+        "\\green\\D8",
         "",
         "Eight-Sided",
-        "\\GREEN\\    -    Classic Pack",
-        "\\GREEN\\    -    Arabic Numerals",
+        "\\green\\    -    Classic Pack",
+        "\\green\\    -    Arabic Numerals",
     },
     preset = "d8",
     textures = {"dice_classic_d8.png"},
@@ -64,11 +64,11 @@ dice.register_die("dice_classic:classic_d8", {
 
 dice.register_die("dice_classic:classic_d12", {
     tooltip = {
-        "\\GREEN\\D12",
+        "\\green\\D12",
         "",
         "Twelve-Sided",
-        "\\GREEN\\    -    Classic Pack",
-        "\\GREEN\\    -    Arabic Numerals",
+        "\\green\\    -    Classic Pack",
+        "\\green\\    -    Arabic Numerals",
     },
     preset = "d12",
     textures = {"dice_classic_d12.png"},
@@ -80,11 +80,11 @@ dice.register_die("dice_classic:classic_d12", {
 
 dice.register_die("dice_classic:classic_d20", {
     tooltip = {
-        "\\GREEN\\D20",
+        "\\green\\D20",
         "",
         "Twenty-Sided",
-        "\\GREEN\\   -    Classic Pack",
-        "\\GREEN\\   -    Arabic Numerals",
+        "\\green\\   -    Classic Pack",
+        "\\green\\   -    Arabic Numerals",
     },
     preset = "d20",
     textures = {"dice_classic_d20.png"},
@@ -122,14 +122,13 @@ dice_crafter.register_blueprint("dice_classic:blueprint", {
             "dice_classic:coin"
         }
     },
-    tooltip = {"\\GREEN\\Classic Blueprint"},
+    tooltip = {"\\green\\Classic Blueprint"},
     inventory_image = "dice_classic_blueprint.png",
     groups = {dice_blueprint_classic = 1}
 })
 
-
-local paper = xcompat.materials.paper
-local black = xcompat.materials.dye_black
+local paper = xcompat.materials.paper or ""
+local black = xcompat.materials.dye_black or ""
 core.register_craft({
     output = "dice_classic:blueprint",
     recipe = {
